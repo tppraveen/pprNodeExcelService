@@ -24,7 +24,7 @@ app.post('/updateCategoryStatusById',categoryService.updateCategoryStatusById);
 app.post('/deleteCategoryById',categoryService.deleteCategoryById);
 
 const server = http.createServer(app);
-const PORT = 3000;
+const PORT =  process.env.PORT || 4000 
 server.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
